@@ -150,70 +150,24 @@ dependencies:
 3. **Tap "Undo"** in the snackbar to restore a removed favorite
 4. **Tap the trash icon** in the app bar to clear all favorites (with confirmation dialog)
 
-## Code Comments
-
-The codebase is extensively documented to facilitate learning:
-
-- **Class-level comments**: Explain the purpose and responsibilities of each class
-- **Method comments**: Describe what each method does and why
-- **Inline comments**: Clarify complex logic and important concepts
-- **SOLID principles**: Explained with practical examples throughout the code
-- **Architecture decisions**: Documented with reasoning
-
-Look for comments marked with `/** BURAYA BAK */` in the code - these highlight important learning concepts!
-
-## Learning Points
-
-This app demonstrates several important Flutter concepts:
-
-1. **Cubit Pattern**: Simplified state management without events (easier than full BLoC)
-2. **Repository Pattern**: Data abstraction layer for easy testing and swapping data sources
-3. **Dependency Injection**: Using BlocProvider for proper DI
-4. **Clean Code**: Well-commented and organized codebase
-5. **SOLID Principles**: Applied throughout the entire project
-6. **Async Programming**: Handling API calls with Future and async/await
-7. **Local Storage**: Using SharedPreferences for data persistence
-8. **Infinite Scroll**: Pagination with scroll detection and lazy loading
-9. **Equatable**: Preventing unnecessary widget rebuilds with value equality
-10. **Error Handling**: Proper try-catch and error state management
-11. **Spread Operator**: Modern Dart syntax for list manipulation
-12. **Microtasks**: Understanding Flutter's event loop for build-time operations
-
-## Key Concepts Explained in Code
-
-### Equatable
-Used for efficient state comparison to prevent unnecessary UI rebuilds when state values haven't actually changed.
-
-### Spread Operator (`...`)
-Modern Dart syntax for combining lists immutably:
-```dart
-final updatedMovies = [...currentMovies, ...newMovies];
-```
-
-### Future.microtask
-Schedules operations to run after the current build cycle completes, avoiding build-time state changes.
-
-### Infinite Scroll
-Detects when user scrolls near the bottom and automatically loads the next page of results.
-
 ## Project Structure Benefits
 
-- ✅ **Testability**: Clear separation of concerns makes unit testing straightforward
-- ✅ **Maintainability**: Easy to modify and extend without breaking existing code
-- ✅ **Readability**: Clear organization, naming conventions, and extensive documentation
-- ✅ **Scalability**: Easy to add new features without refactoring
-- ✅ **Reusability**: Components can be reused across different parts of the app
-- ✅ **Performance**: Optimized with Equatable to prevent unnecessary rebuilds
+- **Testability**: Clear separation of concerns makes unit testing straightforward
+- **Maintainability**: Easy to modify and extend without breaking existing code
+- **Readability**: Clear organization, naming conventions, and extensive documentation
+- **Scalability**: Easy to add new features without refactoring
+- **Reusability**: Components can be reused across different parts of the app
+- **Performance**: Optimized with Equatable to prevent unnecessary rebuilds
 
 ## Notes & Best Practices
 
-- ✅ Ensure you have a stable internet connection to load movies from TMDB API
-- ✅ Favorites are stored locally and persist between app restarts
-- ✅ The TMDB API has rate limits - avoid making excessive requests
-- ✅ Search functionality debounces to avoid unnecessary API calls
-- ✅ Error states are handled gracefully with retry options
-- ✅ Loading states provide user feedback during async operations
-- ✅ Undo functionality uses snackbar for better UX
+- Ensure you have a stable internet connection to load movies from TMDB API
+- Favorites are stored locally and persist between app restarts
+- The TMDB API has rate limits - avoid making excessive requests
+- Search functionality debounces to avoid unnecessary API calls
+- Error states are handled gracefully with retry options
+- Loading states provide user feedback during async operations
+- Undo functionality uses snackbar for better UX
 
 ## API Information
 
@@ -222,18 +176,6 @@ This app uses [The Movie Database (TMDB) API](https://www.themoviedb.org/documen
 **API Endpoints Used:**
 - `/movie/popular` - Get popular movies with pagination
 - `/search/movie` - Search movies by query string
-
-## Future Improvements
-
-Potential features to add:
-- Movie details page with full information
-- Movie trailers and videos
-- Different movie categories (Top Rated, Upcoming, Now Playing)
-- Filtering and sorting options
-- Dark mode support
-- Offline mode with cached data
-- Movie recommendations
-- User reviews and ratings
 
 ## License
 
