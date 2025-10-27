@@ -1,0 +1,1 @@
+ /Users/ahmeterenyasar/Desktop/flutterProjects/movie_list_app/.dart_tool/flutter_build/92aeaaa8519e7f8757ad4c71c29fa25f/native_assets.json: 
